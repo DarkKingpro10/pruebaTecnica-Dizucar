@@ -1,0 +1,33 @@
+.frm-login {
+    min-width: 150px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-full-width {
+  width: 100%;
+}
+.dv-login{
+    height: calc(100vh - 60px);
+}
+.c-login{
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+    background: #fff;
+}
+.btn-footer .btn{
+    box-shadow: unset;
+    width: 100%;
+}
+.btn-footer .btn:hover{
+    box-shadow: unset;
+}
+.sp-c{
+    color: #0d6efd;
+}
+.session-success .mdc-snackbar__surface {
+    background-color:rgb(62, 181, 62) !important;
+    padding: 1rem;
+}

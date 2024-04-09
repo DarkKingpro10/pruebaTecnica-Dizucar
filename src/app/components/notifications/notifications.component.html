@@ -1,0 +1,8 @@
+<div class="d-flex">
+    <span class="sesion-notification sp-txt" matSnackBarLabel>
+        {{ data.message }}
+    </span>
+    <span matSnackBarActions class="btn-sesion sp-txt">
+        <button mat-button matSnackBarAction (click)="snackBarRef.dismissWithAction()"><i class="material-icons opacity-10 sp-sesion">cancel</i></button>
+    </span>
+</div>

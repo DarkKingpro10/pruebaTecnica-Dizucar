@@ -1,0 +1,137 @@
+<div class="content-main">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+        <div class="sidenav-header" style="position: relative;">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href="#" target="_blank">
+                <span class="material-icons opacity-10 text-white navbar-brand-img h-100 icon-logo">
+                    devices
+                </span>
+                <!--img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo"-->
+                <span class="ms-1 font-weight-bold text-white title-bu">INVENTARIO</span>
+            </a>
+            <span class="handler-menu" id="handler-menu"><i class="fa fa-angle-left"></i></span>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav nav-sidebar menu-app">
+                <li class="nav-item">
+                    <a class="nav-link text-white bg-gradient-primary d-block" [class.active]="path.indexOf('dashboard') > -1 " routerLink="/dashboard">
+                        <i class="material-icons opacity-10">dashboard</i>
+                        <p class="mb-0">
+                            <span class="nav-link-text ms-1">Dashboard</span>
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white " (click)="logout();">
+                        <i class="material-icons opacity-10">logout</i>
+                        <p class="mb-0">
+                            <span class="nav-link-text ms-1">Cerrar Sesión</span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+            <div class="container-fluid py-1 px-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Sistema</a></li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Inventario</li>
+                    </ol>
+                    <!--h6 class="font-weight-bolder mb-0">Dashboard</h6-->
+                </nav>
+                <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 justify-content-end" id="navbar">
+                    <ul class="navbar-nav  justify-content-end">
+                        <li class="nav-item d-xl-none ps-3 pe-3 d-flex align-items-center">
+                            <a href="javascript:;" (click)="toggleSidebar()" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown pe-2 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-bell cursor-pointer"></i>
+                                <span class="num" *ngIf="notifications.length > 0">{{notifications.length}}</span>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <a href="../pages/sign-in.html" class="nav-link text-body font-weight-bold px-0">
+                                <i class="fa fa-user me-sm-1"></i>
+                                <span class="d-sm-inline d-none">Admin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="sub-main-content">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="footer-menu">
+            
+            <nav class="dv-up">
+                <!--svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#1669e3" fill-opacity="1" d="M0,64L120,64C240,64,480,64,720,106.7C960,149,1200,235,1320,277.3L1440,320L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+                </svg-->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#fff" fill-opacity="1" d="M0,64L120,64C240,64,480,64,720,106.7C960,149,1200,235,1320,277.3L1440,320L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+                </svg>
+                <ul class="navbar-nav m-up">
+                    <li data-action="recepcion"><i class="fa-solid fa-clipboard-list"></i><span>Recepción</span></li>
+                    <li data-action="despacho"><i class="fa-solid fa-clipboard-list"></i><span>Despacho</span></li>
+                    <li data-action="ingreso"><i class="fa-solid fa-file-circle-plus"></i><span>Ingreso</span></li>
+                    <li data-action="salida"><i class="fa-solid fa-file-circle-minus"></i><span>Salida</span></li>
+                    <li data-action="tranformations"><i class="fa-solid fa-rotate"></i><span>Transformación</span></li>
+                    <li data-action="consignacion"><i class="fa-solid fa-file-contract"></i><span>Consignación</span></li>
+                </ul>
+            </nav>
+            <nav class="navbar menu-m">
+                <ul class="navbar-nav">
+                    <li><i class="fa-solid fa-house-user" routerLink="/dashboard"></i><span>Home</span></li>
+                    <li><i class="fa-solid fa-truck" routerLink="/transaction/despacho"></i><span>Despacho</span></li>
+                    <li id="trans"><i class="fa-solid fa-paste"></i><span>Transacciones</span></li>
+                    <!--li><i class="fa-solid fa-bell"></i>Notificaciones</li-->
+                    <li class="nav-item dropdown pe-2 d-flex align-items-center dropup">
+                        <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuMovil" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-bell cursor-pointer"></i>
+                            <span class="num" *ngIf="notifications.length > 0">{{notifications.length}}</span>
+                            <span>Notificaciones</span>
+                        </a>
+                        <ul class="dropdown-menu notificacion dropdown-menu-end  px-2 py-3 me-sm-n4" *ngIf="notifications.length > 0" aria-labelledby="dropdownMenuMovil">
+                            <li class="head"><span>Notificaciones</span> <span class="fa fa-trash text-danger"></span></li>
+                            <li class="mb-2" *ngFor="let noti of notifications">
+                                <a class="dropdown-item border-radius-md" >
+                                    <div class="d-flex py-1">
+                                        <div class="my-auto">
+                                            <i class="material-icons opacity-10">pending_actions</i>
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="text-sm font-weight-normal mb-1">
+                                                <span class="font-weight-bold">{{noti.message}}:</span><br>
+                                                <!--span>{{noti.bodega}}</span-->
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0">
+                                                <i class="fa fa-clock me-1"></i>
+                                                {{noti.date}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bg-backdrop"></div>
+    </main>
+
+</div>

@@ -1,0 +1,273 @@
+
+.icon-logo{
+    font-size: 2rem;
+}
+.icon-logo+span{
+    vertical-align: super;
+}
+#sidenav-main{
+    background: #1669e3;
+    border-radius: 3px;
+    margin: 0px !important;
+    z-index: 99999;
+}
+
+.nav-sidebar .nav-link>p>.right {
+    position: absolute;
+    right: 1rem;
+    top: 35%;
+}
+
+.nav-sidebar .nav-item > .nav-link {
+    position: relative;
+}
+
+.sidebar-mini .main-sidebar .nav-link,
+.sidebar-mini-md .main-sidebar .nav-link,
+.sidebar-mini-xs .main-sidebar .nav-link {
+    width: calc(250px - 0.5rem * 2);
+    transition: width ease-in-out .3s;
+}
+
+.nav-sidebar .nav-link p {
+    display: inline;
+    margin: 0;
+    white-space: normal;
+    vertical-align: sub;
+    font-size: 0.9rem;
+}
+.nav-sidebar .nav-link > i {
+    vertical-align: middle;
+    font-size: 1.4rem;
+}
+.nav-sidebar .nav-treeview .nav-link > i {
+    font-size: 1.2rem;
+}
+.nav-sidebar>.nav-item.submenu{
+    overflow: hidden;
+}
+.nav-sidebar>.nav-item>.nav-treeview {
+    position: relative;
+    background-color: transparent;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translate(0px, -10px);
+    z-index: -3;
+    overflow: hidden;
+}
+.nav-sidebar .menu-open>.nav-treeview {
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.3s ease;
+    transform: translate(0px, 0px);
+    animation: aparecer 0.5s forwards;
+}
+.nav-sidebar .submenu>a .right{
+    transition: all 0.3s ease;
+}
+.nav-sidebar .menu-open>a .right{
+    transform: rotate(-90deg);
+}
+.nav-sidebar.navbar-nav .nav-link{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+span.handler-menu {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    padding: 0 7px;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.content-main.sidebar-mini #sidenav-main {
+    transition: all 0.3s ease;
+    margin-left: 0;
+    width: 4.6rem;
+}
+.sidebar-mini .navbar-nav>.nav-item{
+    transition: all 0.3s ease;
+    width: 3.6rem;
+    overflow: hidden;
+}
+.sidebar-mini #sidenav-main >.nav-item a{
+    margin: 10px;
+}
+.sidebar-mini .navbar-vertical.navbar-expand-xs .navbar-nav .nav-link{
+    transition: all 0.5s ease;
+    margin: 0em;
+}
+.sidebar-mini #sidenav-main .nav-sidebar{
+    transition: all 0.5s ease;
+    margin-left: 8px;
+}
+.sidebar-mini #sidenav-main:hover .nav-sidebar{
+    margin-left: 0px;
+}
+.sidebar-mini #sidenav-main:hover.navbar-vertical.navbar-expand-xs .navbar-nav .nav-link{
+    margin: 0 1rem;
+}
+.content-main.sidebar-mini #sidenav-main:hover {
+    width: 100%;
+}
+.sidebar-mini #sidenav-main:hover .nav-item{
+    width: 100%
+}
+
+.sidebar-mini #sidenav-main .conf{
+    display: none;
+}
+.sidebar-mini #sidenav-main:hover .nav-item{
+    display: block;
+}
+.sidebar-mini #sidenav-main .icon-logo+span{
+    display: none;
+    transition: all 0.5s ease;
+}
+.sidebar-mini #sidenav-main:hover .icon-logo+span{
+    display: inline;
+}
+.sidebar-mini .sidenav .navbar-brand {
+    padding-left: 1.5rem;
+    transition: all 0.5s ease;
+}
+.sidebar-mini #sidenav-main:hover .navbar-brand {
+    padding-left: 2rem;
+}
+
+.navbar-vertical.navbar-expand-xs .navbar-collapse{
+    overflow: hidden;
+}
+
+.content-main.sidebar-mini .sidenav.fixed-start+.main-content {
+    margin-left: 5.125rem;
+}
+span.num {
+    display: flex;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    font-weight: 600;
+    top: -4px;
+    justify-content: center;
+}
+.dropdown-menu li.head{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.dropup .dropdown-menu:after{
+    display: none;
+}
+.dropdown-menu.notificacion li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.head span.fa{
+    background: #F44335;
+    padding: 5px;
+    color: #FFF !important;
+    border-radius: 5px;
+}
+.toast{
+    top: 13rem;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transition: all 0.8s ease-in-out;
+}
+.toast-header .me-auto{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.material-icons{
+    display: inline-block;
+    width: 25px;
+}
+.notification-bell {
+    transition: all 0.8s ease-in-out;
+}
+@media (max-width: 1199.98px){
+    .sidenav:not(.showSide) {
+        transform: translateX(-17.125rem);
+    }
+}
+@media (max-width: 990px){
+    #navbar {
+        display: flex!important;
+        flex-basis: auto !important;
+    }
+    #navbar .navbar-nav{
+        flex-direction: row !important;
+    }
+}
+@media (max-width: 900px){
+    span.handler-menu{
+        display: none;
+    }
+}
+@media (min-width: 992px){
+    .sidebar-mini .nav-sidebar, .sidebar-mini .nav-sidebar .nav-link, .sidebar-mini .nav-sidebar>.nav-header {
+        white-space: nowrap;
+    }
+    .sidebar-mini .nav-sidebar .nav-link p{
+        margin-left: -10px;
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        visibility: hidden;
+        white-space: nowrap;
+    }
+    .sidebar-mini #sidenav-main:hover .nav-item p{
+    /*.sidebar-mini #sidenav-header:hover .nav-link p{*/
+        display: inline-block;
+        margin-left: 0;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        visibility: visible;
+    }
+    
+}
+@keyframes aparecer {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%; /* Al final de la animación, la altura cambiará a 100px */
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+

@@ -1,0 +1,17 @@
+/*.mdc-snackbar__surface {
+    padding: 10px 15px;
+    background-color: rgb(62, 181, 62) !important;
+}
+.sesion-notification {
+    color: #fff;
+    padding: 10px 15px;
+    background-color: rgb(62, 181, 62);
+}
+.session-success .mdc-snackbar__surface {
+    background-color:rgb(62, 181, 62) !important;
+    padding: 1rem;
+}*/
+.session-success .btn-sesion{
+    color: #fff;
+}
+
