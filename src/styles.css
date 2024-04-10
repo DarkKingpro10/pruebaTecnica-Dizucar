@@ -561,3 +561,37 @@ mat-checkbox .mdc-checkbox__background{
     background-position-x: -1000px; 
   }
 }
+
+.fc .fc-more-popover .fc-popover-body{
+  max-height: 250px !important;
+  overflow: auto !important;
+}
+
+.fc-view thead a{
+  color: gray !important;
+}
+
+.fc-view-harness a{
+  color: #ff8c00 !important;
+}
+
+.fc-button-group button{
+  background-color: #00b2a9 !important;
+  border-color: #00b2a9 !important;
+}
+
+@media (width <= 767px) {
+  .fc-toolbar-chunk{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .fc-direction-ltr .fc-toolbar > * > :not(:first-child){
+    margin: 0;
+  }
+
+  .fc-button-group .fc-timeGridWeek-button{
+    display: none;
+  }
+}

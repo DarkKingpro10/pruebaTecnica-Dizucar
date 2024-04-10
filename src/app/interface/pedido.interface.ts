@@ -37,3 +37,7 @@ enum DireccionFacturacion {
 enum UsuarioCreacion {
   Admin = "Admin",
 }
+
+export interface GroupedEventsByDate {
+  [date: string]: Pedido[];
+}
